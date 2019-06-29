@@ -6,3 +6,42 @@
 //
 
 @import "compass/css3/font-face";
+
+@include font-face("icon", font-files(
+  "icomoon/fonts/icomoon.eot",
+  "icomoon/fonts/icomoon.woff",
+  "icomoon/fonts/icomoon.ttf",
+  "icomoon/fonts/icomoon.svg"));
+
+*[class^="icon-"]:before, *[class*=" icon-"]:before {
+  font-family: "icon";
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+}
+
+.icon--1:before { content: "\e914"; }
+.icon-facebook:before { content: "\e911"; }
+.icon-instagram:before { content: "\e912"; }
+.icon-line:before { content: "\e913"; }
+.icon-logo:before { content: "\e903"; }
+.icon-price:before { content: "\e910"; }
+.icon-arrow-left:before { content: "\e908"; }
+.icon-arrow-right:before { content: "\e909"; }
+.icon-chevron-down:before { content: "\e90a"; }
+.icon-chevron-left:before { content: "\e90b"; }
+.icon-chevron-right:before { content: "\e90c"; }
+.icon-chevron-up:before { content: "\e90d"; }
+.icon-menu:before { content: "\e90e"; }
+.icon-x:before { content: "\e90f"; }
+.icon-call:before { content: "\e900"; }
+.icon-drafts:before { content: "\e901"; }
+.icon-event_note:before { content: "\e904"; }
+.icon-drive_file_rename_outline:before { content: "\e902"; }
+.icon-phone_enabled:before { content: "\e905"; }
+.icon-refresh:before { content: "\e906"; }
+.icon-mapmarker:before { content: "\e907"; }
+.icon-clock2:before { content: "\e94f"; }
+.icon-loop2:before { content: "\ea2e"; }
