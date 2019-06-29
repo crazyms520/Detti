@@ -6,11 +6,10 @@
  */
  
 $(function() {
-  $('*[data-bgurl]').each(function() {
+  $('#header').each(function() {
     var $that = $(this);
-    var url = $that.data('bgurl');
-    $that.css({'background-image': 'url(' + (url.length ? url : '') + ')'});
+    $that.find('label.icon-menu').click(function() {
+      $that.toggleClass('show');
+    });
   });
-
-
 });
