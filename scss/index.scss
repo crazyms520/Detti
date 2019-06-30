@@ -420,146 +420,147 @@ html {
     display: inline-block;
     width: 100%;
     max-width: 1000px;
+  }
+}
 
-    .items {
-      position: relative;
+#index-sale-items {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 32px;
+  $h: 250px;
+  height: $h + 100px;
+
+  label {
+    position: absolute;
+    left: 0;
+    top: #{($h / 2) - (42px / 2)};
+
+    display: inline-block;
+    width: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 32px;
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    @include transition(color .3s);
+    z-index: 2;
+
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+    
+    + label {
+      right: 0;
+      left: auto;
+    }
+  }
+  .items {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - #{42px * 2});
+    margin: 0 42px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    
+    a {
+      position: absolute;
+      top: 0;
       display: inline-block;
-      width: 100%;
-      margin-top: 32px;
-      $h: 250px;
-      height: $h + 100px;
-
-      label {
-        position: absolute;
-        left: 0;
-        top: #{($h / 2) - (42px / 2)};
-
+      width: calc(100% / 3);
+      height: 100%;
+      padding: 0 16px;
+      text-align: left;
+      cursor: pointer;
+      @include transition(left .3s);
+      
+      * {
         display: inline-block;
-        width: 42px;
-        line-height: 42px;
-        text-align: center;
-        font-size: 32px;
-        color: rgba(255, 255, 255, .5);
-        cursor: pointer;
-        @include transition(color .3s);
-        z-index: 2;
-
-
-        &:hover {
-          color: rgba(255, 255, 255, 1);
-        }
-        
-        + label {
-          right: 0;
-          left: auto;
-        }
+        width: 100%;
+        @include overflow-docx3();
       }
-      > div {
+
+      figure {
         position: relative;
-        display: inline-block;
-        width: calc(100% - #{42px * 2});
-        margin: 0 42px;
-        height: 100%;
-        overflow: hidden;
-        z-index: 1;
+        height: $h;
+        margin: 0;
+        background-color: white;
+        @include border-radius(3px);
         
-        .item {
+        &:after {
+          content: '';
           position: absolute;
+          left: 0;
           top: 0;
           display: inline-block;
-          width: calc(100% / 3);
-          height: 100%;
-          padding: 0 16px;
-          text-align: left;
-          @include transition(left .3s);
-          
-          * {
-            display: inline-block;
-            width: 100%;
-            @include overflow-docx3();
-          }
-
-          figure {
-            position: relative;
-            height: $h;
-            margin: 0;
-            background-color: white;
-            @include border-radius(3px);
-            
-            &:after {
-              content: '';
-              position: absolute;
-              left: 0;
-              top: 0;
-              display: inline-block;
-              width: 100%;
-              height: 100%;
-              border: 6px solid rgba(224, 182, 95, 0);
-              @include transition(border-color .3s);
-            }
-          }
-          b {
-            color: rgba(244, 255, 255, 1.00);
-            height: 32px + 4px;
-            line-height: 32px;
-            margin-top: 8px;
-            border-bottom: 1px dashed rgba(255, 255, 255, .20)
-          }
-          span {
-            margin-top: 4px;
-            height: 24px;
-            line-height: 24px;
-            font-size: 18px;
-            color: rgba(225, 173, 0, 1.00);
-            &:before {
-              content: '特價';
-            }
-          }
-          del {
-            height: 21px;
-            line-height: 21px;
-            font-size: 12px;
-            color: rgba(144, 161, 188, 1.00);
-            &:before {
-              content: '原價';
-            }
-          }
-        }
-      }
-
-      @include range-width(0, 650px) {
-        label {
-          background-color: rgba(31, 45, 74, .600);
-          @include border-right-radius(3px);
-
-          + label {
-            @include border-right-radius(0);
-            @include border-left-radius(3px);
-          }
-        }
-      }
-
-      @include range-width(0, 500px) {
-        > div {
           width: 100%;
-          margin: 0;
-          .item {
-            width: calc(100% - #{40px * 2});
-          }
+          height: 100%;
+          border: 6px solid rgba(224, 182, 95, 0);
+          @include transition(border-color .3s);
         }
+      }
+      b {
+        color: rgba(244, 255, 255, 1.00);
+        height: 32px + 4px;
+        line-height: 32px;
+        margin-top: 8px;
+        border-bottom: 1px dashed rgba(255, 255, 255, .20)
+      }
+      span {
+        margin-top: 4px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 18px;
+        color: rgba(225, 173, 0, 1.00);
+        &:before {
+          content: '特價';
+        }
+      }
+      del {
+        height: 21px;
+        line-height: 21px;
+        font-size: 12px;
+        color: rgba(144, 161, 188, 1.00);
+        &:before {
+          content: '原價';
+        }
+      }
+    }
+  }
 
-        @for $i from 1 through 10 {
-          &[data-i='#{$i}'] {
-            > div .item {
-              @for $j from 1 through 10 {
-                &:nth-child(#{$j}) {
-                  left: calc((100% - #{40px * 2}) * #{$j - $i} + 40px);
-                  @if($j == $i) {
-                    figure {
-                      &:after {
-                        border-color: rgba(224, 182, 95, 1);
-                      }
-                    }
+  @include range-width(0, 650px) {
+    label {
+      background-color: rgba(31, 45, 74, .600);
+      @include border-right-radius(3px);
+
+      + label {
+        @include border-right-radius(0);
+        @include border-left-radius(3px);
+      }
+    }
+  }
+
+  @include range-width(0, 500px) {
+    .items {
+      width: 100%;
+      margin: 0;
+      a {
+        width: calc(100% - #{40px * 2});
+      }
+    }
+
+    @for $i from 1 through 10 {
+      &[data-i='#{$i}'] {
+        .items a {
+          @for $j from 1 through 10 {
+            &:nth-child(#{$j}) {
+              left: calc((100% - #{40px * 2}) * #{$j - $i} + 40px);
+              @if($j == $i) {
+                figure {
+                  &:after {
+                    border-color: rgba(224, 182, 95, 1);
                   }
                 }
               }
@@ -567,138 +568,137 @@ html {
           }
         }
       }
-      @include range-width(500px) {
-        > div {
-          .item {
-            &:hover {
-              figure {
-                &:after {
-                  border-color: rgba(224, 182, 95, 1);
-                }
-              }
-            }
-          }
-        }
-        @for $i from 1 through 10 {
-          &[data-i='#{$i}'] {
-            > div .item {
-              @for $j from 1 through 10 {
-                &:nth-child(#{$j}) {
-                  left: calc(100% / 3 * #{$j - $i});
-                }
-              }
+    }
+  }
+  @include range-width(500px) {
+    .items {
+      a {
+        &:hover {
+          figure {
+            &:after {
+              border-color: rgba(224, 182, 95, 1);
             }
           }
         }
       }
-
-      @include range-width(0, 350px) {
-        $h: 180px;
-        height: $h + 100px;
-        label {
-          top: #{($h / 2) - (42px / 2)};
-        }
-        > div {
-          .item {
-            figure {
-              height: $h;
+    }
+    @for $i from 1 through 10 {
+      &[data-i='#{$i}'] {
+        .items a {
+          @for $j from 1 through 10 {
+            &:nth-child(#{$j}) {
+              left: calc(100% / 3 * #{$j - $i});
             }
           }
         }
-      };
-      @include range-width(350px, 400px) {
-        $h: 200px;
-        height: $h + 100px;
-        label {
-          top: #{($h / 2) - (42px / 2)};
-        }
-        > div {
-          .item {
-            padding: 0 8px;
-            figure {
-              height: $h;
-            }
-          }
-        }
-      };
-      @include range-width(400px, 500px) {
-        $h: 240px;
-        height: $h + 100px;
-        label {
-          top: #{($h / 2) - (42px / 2)};
-        }
-        > div {
-          .item {
-            padding: 0 8px;
-            figure {
-              height: $h;
-            }
-          }
-        }
-      };
-      @include range-width(500px, 650px) {
-        $h: 140px;
-        height: $h + 100px;
-        label {
-          top: #{($h / 2) - (42px / 2)};
-        }
-        > div {
-          width: 100%;
-          margin: 0;
-          .item {
-            padding: 0 8px;
-            figure {
-              height: $h;
-            }
-          }
-        }
-      };
-      @include range-width(650px, 720px) {
-        $h: 140px;
-        height: $h + 100px;
-        label {
-          top: #{($h / 2) - (42px / 2)};
-        }
-        > div {
-          .item {
-            figure {
-              height: $h;
-            }
-          }
-        }
-      };
-      @include range-width(720px, 800px) {
-        $h: 170px;
-        height: $h + 100px;
-        label {
-          top: #{($h / 2) - (42px / 2)};
-        }
-        > div {
-          .item {
-            figure {
-              height: $h;
-            }
-          }
-        }
-      };
-      @include range-width(800px, 920px) {
-        $h: 200px;
-        height: $h + 100px;
-        label {
-          top: #{($h / 2) - (42px / 2)};
-        }
-        > div {
-          .item {
-            figure {
-              height: $h;
-            }
-          }
-        }
-      };
+      }
     }
   }
-}
 
+  @include range-width(0, 350px) {
+    $h: 180px;
+    height: $h + 100px;
+    label {
+      top: #{($h / 2) - (42px / 2)};
+    }
+    .items {
+      a {
+        figure {
+          height: $h;
+        }
+      }
+    }
+  };
+  @include range-width(350px, 400px) {
+    $h: 200px;
+    height: $h + 100px;
+    label {
+      top: #{($h / 2) - (42px / 2)};
+    }
+    .items {
+      a {
+        padding: 0 8px;
+        figure {
+          height: $h;
+        }
+      }
+    }
+  };
+  @include range-width(400px, 500px) {
+    $h: 240px;
+    height: $h + 100px;
+    label {
+      top: #{($h / 2) - (42px / 2)};
+    }
+    .items {
+      a {
+        padding: 0 8px;
+        figure {
+          height: $h;
+        }
+      }
+    }
+  };
+  @include range-width(500px, 650px) {
+    $h: 140px;
+    height: $h + 100px;
+    label {
+      top: #{($h / 2) - (42px / 2)};
+    }
+    .items {
+      width: 100%;
+      margin: 0;
+      a {
+        padding: 0 8px;
+        figure {
+          height: $h;
+        }
+      }
+    }
+  };
+  @include range-width(650px, 720px) {
+    $h: 140px;
+    height: $h + 100px;
+    label {
+      top: #{($h / 2) - (42px / 2)};
+    }
+    .items {
+      a {
+        figure {
+          height: $h;
+        }
+      }
+    }
+  };
+  @include range-width(720px, 800px) {
+    $h: 170px;
+    height: $h + 100px;
+    label {
+      top: #{($h / 2) - (42px / 2)};
+    }
+    .items {
+      a {
+        figure {
+          height: $h;
+        }
+      }
+    }
+  };
+  @include range-width(800px, 920px) {
+    $h: 200px;
+    height: $h + 100px;
+    label {
+      top: #{($h / 2) - (42px / 2)};
+    }
+    .items {
+      a {
+        figure {
+          height: $h;
+        }
+      }
+    }
+  };
+}
 #index-new {
   display: inline-block;
   width: 100%;

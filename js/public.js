@@ -11,6 +11,4 @@ $(function() {
     var url = $that.data('bgurl');
     $that.css({'background-image': 'url(' + (url.length ? url : '') + ')'});
   });
-
-
 });

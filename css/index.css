@@ -193,260 +193,261 @@ html body::selection { color: white; background-color: #78baff; }
 
 #index-sale { display: inline-block; width: 100%; padding: 32px 0; background-color: #304969; }
 #index-sale .container { display: inline-block; width: 100%; max-width: 1000px; }
-#index-sale .container .items { position: relative; display: inline-block; width: 100%; margin-top: 32px; height: 350px; }
-#index-sale .container .items label { position: absolute; left: 0; top: 104px; display: inline-block; width: 42px; line-height: 42px; text-align: center; font-size: 32px; color: rgba(255, 255, 255, 0.5); cursor: pointer; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; z-index: 2; }
-#index-sale .container .items label:hover { color: white; }
-#index-sale .container .items label + label { right: 0; left: auto; }
-#index-sale .container .items > div { position: relative; display: inline-block; width: calc(100% - 84px); margin: 0 42px; height: 100%; overflow: hidden; z-index: 1; }
-#index-sale .container .items > div .item { position: absolute; top: 0; display: inline-block; width: calc(100% / 3); height: 100%; padding: 0 16px; text-align: left; -moz-transition: left 0.3s; -o-transition: left 0.3s; -webkit-transition: left 0.3s; transition: left 0.3s; }
-#index-sale .container .items > div .item * { display: inline-block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#index-sale .container .items > div .item figure { position: relative; height: 250px; margin: 0; background-color: white; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
-#index-sale .container .items > div .item figure:after { content: ''; position: absolute; left: 0; top: 0; display: inline-block; width: 100%; height: 100%; border: 6px solid rgba(224, 182, 95, 0); -moz-transition: border-color 0.3s; -o-transition: border-color 0.3s; -webkit-transition: border-color 0.3s; transition: border-color 0.3s; }
-#index-sale .container .items > div .item b { color: #f4ffff; height: 36px; line-height: 32px; margin-top: 8px; border-bottom: 1px dashed rgba(255, 255, 255, 0.2); }
-#index-sale .container .items > div .item span { margin-top: 4px; height: 24px; line-height: 24px; font-size: 18px; color: #e1ad00; }
-#index-sale .container .items > div .item span:before { content: '特價'; }
-#index-sale .container .items > div .item del { height: 21px; line-height: 21px; font-size: 12px; color: #90a1bc; }
-#index-sale .container .items > div .item del:before { content: '原價'; }
-@media screen and (max-width: 649px) and (min-width: 0) { #index-sale .container .items label { background-color: rgba(31, 45, 74, 0.6); -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px; border-bottom-right-radius: 3px; }
-  #index-sale .container .items label + label { -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; border-top-right-radius: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0; border-bottom-right-radius: 0; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; } }
-@media screen and (max-width: 499px) and (min-width: 0) { #index-sale .container .items > div { width: 100%; margin: 0; }
-  #index-sale .container .items > div .item { width: calc(100% - 80px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(1) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(1) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(2) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(3) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(4) { left: calc((100% - 80px) * 3 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(5) { left: calc((100% - 80px) * 4 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(6) { left: calc((100% - 80px) * 5 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(7) { left: calc((100% - 80px) * 6 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(8) { left: calc((100% - 80px) * 7 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(9) { left: calc((100% - 80px) * 8 + 40px); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(10) { left: calc((100% - 80px) * 9 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(1) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(2) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(2) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(3) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(4) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(5) { left: calc((100% - 80px) * 3 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(6) { left: calc((100% - 80px) * 4 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(7) { left: calc((100% - 80px) * 5 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(8) { left: calc((100% - 80px) * 6 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(9) { left: calc((100% - 80px) * 7 + 40px); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(10) { left: calc((100% - 80px) * 8 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(1) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(2) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(3) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(3) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(4) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(5) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(6) { left: calc((100% - 80px) * 3 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(7) { left: calc((100% - 80px) * 4 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(8) { left: calc((100% - 80px) * 5 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(9) { left: calc((100% - 80px) * 6 + 40px); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(10) { left: calc((100% - 80px) * 7 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(1) { left: calc((100% - 80px) * -3 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(2) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(3) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(4) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(4) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(5) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(6) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(7) { left: calc((100% - 80px) * 3 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(8) { left: calc((100% - 80px) * 4 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(9) { left: calc((100% - 80px) * 5 + 40px); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(10) { left: calc((100% - 80px) * 6 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(1) { left: calc((100% - 80px) * -4 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(2) { left: calc((100% - 80px) * -3 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(3) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(4) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(5) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(5) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(6) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(7) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(8) { left: calc((100% - 80px) * 3 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(9) { left: calc((100% - 80px) * 4 + 40px); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(10) { left: calc((100% - 80px) * 5 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(1) { left: calc((100% - 80px) * -5 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(2) { left: calc((100% - 80px) * -4 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(3) { left: calc((100% - 80px) * -3 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(4) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(5) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(6) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(6) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(7) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(8) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(9) { left: calc((100% - 80px) * 3 + 40px); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(10) { left: calc((100% - 80px) * 4 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(1) { left: calc((100% - 80px) * -6 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(2) { left: calc((100% - 80px) * -5 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(3) { left: calc((100% - 80px) * -4 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(4) { left: calc((100% - 80px) * -3 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(5) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(6) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(7) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(7) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(8) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(9) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(10) { left: calc((100% - 80px) * 3 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(1) { left: calc((100% - 80px) * -7 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(2) { left: calc((100% - 80px) * -6 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(3) { left: calc((100% - 80px) * -5 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(4) { left: calc((100% - 80px) * -4 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(5) { left: calc((100% - 80px) * -3 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(6) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(7) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(8) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(8) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(9) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(10) { left: calc((100% - 80px) * 2 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(1) { left: calc((100% - 80px) * -8 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(2) { left: calc((100% - 80px) * -7 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(3) { left: calc((100% - 80px) * -6 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(4) { left: calc((100% - 80px) * -5 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(5) { left: calc((100% - 80px) * -4 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(6) { left: calc((100% - 80px) * -3 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(7) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(8) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(9) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(9) figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(10) { left: calc((100% - 80px) * 1 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(1) { left: calc((100% - 80px) * -9 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(2) { left: calc((100% - 80px) * -8 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(3) { left: calc((100% - 80px) * -7 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(4) { left: calc((100% - 80px) * -6 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(5) { left: calc((100% - 80px) * -5 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(6) { left: calc((100% - 80px) * -4 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(7) { left: calc((100% - 80px) * -3 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(8) { left: calc((100% - 80px) * -2 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(9) { left: calc((100% - 80px) * -1 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(10) { left: calc((100% - 80px) * 0 + 40px); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(10) figure:after { border-color: #e0b65f; } }
-@media screen and (min-width: 500px) { #index-sale .container .items > div .item:hover figure:after { border-color: #e0b65f; }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(1) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(2) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(3) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(4) { left: calc(100% / 3 * 3); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(5) { left: calc(100% / 3 * 4); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(6) { left: calc(100% / 3 * 5); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(7) { left: calc(100% / 3 * 6); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(8) { left: calc(100% / 3 * 7); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(9) { left: calc(100% / 3 * 8); }
-  #index-sale .container .items[data-i='1'] > div .item:nth-child(10) { left: calc(100% / 3 * 9); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(1) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(2) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(3) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(4) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(5) { left: calc(100% / 3 * 3); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(6) { left: calc(100% / 3 * 4); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(7) { left: calc(100% / 3 * 5); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(8) { left: calc(100% / 3 * 6); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(9) { left: calc(100% / 3 * 7); }
-  #index-sale .container .items[data-i='2'] > div .item:nth-child(10) { left: calc(100% / 3 * 8); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(1) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(2) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(3) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(4) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(5) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(6) { left: calc(100% / 3 * 3); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(7) { left: calc(100% / 3 * 4); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(8) { left: calc(100% / 3 * 5); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(9) { left: calc(100% / 3 * 6); }
-  #index-sale .container .items[data-i='3'] > div .item:nth-child(10) { left: calc(100% / 3 * 7); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(1) { left: calc(100% / 3 * -3); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(2) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(3) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(4) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(5) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(6) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(7) { left: calc(100% / 3 * 3); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(8) { left: calc(100% / 3 * 4); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(9) { left: calc(100% / 3 * 5); }
-  #index-sale .container .items[data-i='4'] > div .item:nth-child(10) { left: calc(100% / 3 * 6); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(1) { left: calc(100% / 3 * -4); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(2) { left: calc(100% / 3 * -3); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(3) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(4) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(5) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(6) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(7) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(8) { left: calc(100% / 3 * 3); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(9) { left: calc(100% / 3 * 4); }
-  #index-sale .container .items[data-i='5'] > div .item:nth-child(10) { left: calc(100% / 3 * 5); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(1) { left: calc(100% / 3 * -5); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(2) { left: calc(100% / 3 * -4); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(3) { left: calc(100% / 3 * -3); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(4) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(5) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(6) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(7) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(8) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(9) { left: calc(100% / 3 * 3); }
-  #index-sale .container .items[data-i='6'] > div .item:nth-child(10) { left: calc(100% / 3 * 4); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(1) { left: calc(100% / 3 * -6); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(2) { left: calc(100% / 3 * -5); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(3) { left: calc(100% / 3 * -4); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(4) { left: calc(100% / 3 * -3); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(5) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(6) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(7) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(8) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(9) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='7'] > div .item:nth-child(10) { left: calc(100% / 3 * 3); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(1) { left: calc(100% / 3 * -7); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(2) { left: calc(100% / 3 * -6); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(3) { left: calc(100% / 3 * -5); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(4) { left: calc(100% / 3 * -4); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(5) { left: calc(100% / 3 * -3); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(6) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(7) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(8) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(9) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='8'] > div .item:nth-child(10) { left: calc(100% / 3 * 2); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(1) { left: calc(100% / 3 * -8); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(2) { left: calc(100% / 3 * -7); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(3) { left: calc(100% / 3 * -6); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(4) { left: calc(100% / 3 * -5); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(5) { left: calc(100% / 3 * -4); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(6) { left: calc(100% / 3 * -3); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(7) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(8) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(9) { left: calc(100% / 3 * 0); }
-  #index-sale .container .items[data-i='9'] > div .item:nth-child(10) { left: calc(100% / 3 * 1); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(1) { left: calc(100% / 3 * -9); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(2) { left: calc(100% / 3 * -8); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(3) { left: calc(100% / 3 * -7); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(4) { left: calc(100% / 3 * -6); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(5) { left: calc(100% / 3 * -5); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(6) { left: calc(100% / 3 * -4); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(7) { left: calc(100% / 3 * -3); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(8) { left: calc(100% / 3 * -2); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(9) { left: calc(100% / 3 * -1); }
-  #index-sale .container .items[data-i='10'] > div .item:nth-child(10) { left: calc(100% / 3 * 0); } }
-@media screen and (max-width: 349px) and (min-width: 0) { #index-sale .container .items { height: 280px; }
-  #index-sale .container .items label { top: 69px; }
-  #index-sale .container .items > div .item figure { height: 180px; } }
-@media screen and (max-width: 399px) and (min-width: 350px) { #index-sale .container .items { height: 300px; }
-  #index-sale .container .items label { top: 79px; }
-  #index-sale .container .items > div .item { padding: 0 8px; }
-  #index-sale .container .items > div .item figure { height: 200px; } }
-@media screen and (max-width: 499px) and (min-width: 400px) { #index-sale .container .items { height: 340px; }
-  #index-sale .container .items label { top: 99px; }
-  #index-sale .container .items > div .item { padding: 0 8px; }
-  #index-sale .container .items > div .item figure { height: 240px; } }
-@media screen and (max-width: 649px) and (min-width: 500px) { #index-sale .container .items { height: 240px; }
-  #index-sale .container .items label { top: 49px; }
-  #index-sale .container .items > div { width: 100%; margin: 0; }
-  #index-sale .container .items > div .item { padding: 0 8px; }
-  #index-sale .container .items > div .item figure { height: 140px; } }
-@media screen and (max-width: 719px) and (min-width: 650px) { #index-sale .container .items { height: 240px; }
-  #index-sale .container .items label { top: 49px; }
-  #index-sale .container .items > div .item figure { height: 140px; } }
-@media screen and (max-width: 799px) and (min-width: 720px) { #index-sale .container .items { height: 270px; }
-  #index-sale .container .items label { top: 64px; }
-  #index-sale .container .items > div .item figure { height: 170px; } }
-@media screen and (max-width: 919px) and (min-width: 800px) { #index-sale .container .items { height: 300px; }
-  #index-sale .container .items label { top: 79px; }
-  #index-sale .container .items > div .item figure { height: 200px; } }
+
+#index-sale-items { position: relative; display: inline-block; width: 100%; margin-top: 32px; height: 350px; }
+#index-sale-items label { position: absolute; left: 0; top: 104px; display: inline-block; width: 42px; line-height: 42px; text-align: center; font-size: 32px; color: rgba(255, 255, 255, 0.5); cursor: pointer; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; z-index: 2; }
+#index-sale-items label:hover { color: white; }
+#index-sale-items label + label { right: 0; left: auto; }
+#index-sale-items .items { position: relative; display: inline-block; width: calc(100% - 84px); margin: 0 42px; height: 100%; overflow: hidden; z-index: 1; }
+#index-sale-items .items a { position: absolute; top: 0; display: inline-block; width: calc(100% / 3); height: 100%; padding: 0 16px; text-align: left; cursor: pointer; -moz-transition: left 0.3s; -o-transition: left 0.3s; -webkit-transition: left 0.3s; transition: left 0.3s; }
+#index-sale-items .items a * { display: inline-block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#index-sale-items .items a figure { position: relative; height: 250px; margin: 0; background-color: white; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+#index-sale-items .items a figure:after { content: ''; position: absolute; left: 0; top: 0; display: inline-block; width: 100%; height: 100%; border: 6px solid rgba(224, 182, 95, 0); -moz-transition: border-color 0.3s; -o-transition: border-color 0.3s; -webkit-transition: border-color 0.3s; transition: border-color 0.3s; }
+#index-sale-items .items a b { color: #f4ffff; height: 36px; line-height: 32px; margin-top: 8px; border-bottom: 1px dashed rgba(255, 255, 255, 0.2); }
+#index-sale-items .items a span { margin-top: 4px; height: 24px; line-height: 24px; font-size: 18px; color: #e1ad00; }
+#index-sale-items .items a span:before { content: '特價'; }
+#index-sale-items .items a del { height: 21px; line-height: 21px; font-size: 12px; color: #90a1bc; }
+#index-sale-items .items a del:before { content: '原價'; }
+@media screen and (max-width: 649px) and (min-width: 0) { #index-sale-items label { background-color: rgba(31, 45, 74, 0.6); -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px; border-bottom-right-radius: 3px; }
+  #index-sale-items label + label { -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; border-top-right-radius: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0; border-bottom-right-radius: 0; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; } }
+@media screen and (max-width: 499px) and (min-width: 0) { #index-sale-items .items { width: 100%; margin: 0; }
+  #index-sale-items .items a { width: calc(100% - 80px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(1) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(1) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='1'] .items a:nth-child(2) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(3) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(4) { left: calc((100% - 80px) * 3 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(5) { left: calc((100% - 80px) * 4 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(6) { left: calc((100% - 80px) * 5 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(7) { left: calc((100% - 80px) * 6 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(8) { left: calc((100% - 80px) * 7 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(9) { left: calc((100% - 80px) * 8 + 40px); }
+  #index-sale-items[data-i='1'] .items a:nth-child(10) { left: calc((100% - 80px) * 9 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(1) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(2) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(2) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='2'] .items a:nth-child(3) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(4) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(5) { left: calc((100% - 80px) * 3 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(6) { left: calc((100% - 80px) * 4 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(7) { left: calc((100% - 80px) * 5 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(8) { left: calc((100% - 80px) * 6 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(9) { left: calc((100% - 80px) * 7 + 40px); }
+  #index-sale-items[data-i='2'] .items a:nth-child(10) { left: calc((100% - 80px) * 8 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(1) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(2) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(3) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(3) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='3'] .items a:nth-child(4) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(5) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(6) { left: calc((100% - 80px) * 3 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(7) { left: calc((100% - 80px) * 4 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(8) { left: calc((100% - 80px) * 5 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(9) { left: calc((100% - 80px) * 6 + 40px); }
+  #index-sale-items[data-i='3'] .items a:nth-child(10) { left: calc((100% - 80px) * 7 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(1) { left: calc((100% - 80px) * -3 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(2) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(3) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(4) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(4) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='4'] .items a:nth-child(5) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(6) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(7) { left: calc((100% - 80px) * 3 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(8) { left: calc((100% - 80px) * 4 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(9) { left: calc((100% - 80px) * 5 + 40px); }
+  #index-sale-items[data-i='4'] .items a:nth-child(10) { left: calc((100% - 80px) * 6 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(1) { left: calc((100% - 80px) * -4 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(2) { left: calc((100% - 80px) * -3 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(3) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(4) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(5) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(5) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='5'] .items a:nth-child(6) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(7) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(8) { left: calc((100% - 80px) * 3 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(9) { left: calc((100% - 80px) * 4 + 40px); }
+  #index-sale-items[data-i='5'] .items a:nth-child(10) { left: calc((100% - 80px) * 5 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(1) { left: calc((100% - 80px) * -5 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(2) { left: calc((100% - 80px) * -4 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(3) { left: calc((100% - 80px) * -3 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(4) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(5) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(6) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(6) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='6'] .items a:nth-child(7) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(8) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(9) { left: calc((100% - 80px) * 3 + 40px); }
+  #index-sale-items[data-i='6'] .items a:nth-child(10) { left: calc((100% - 80px) * 4 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(1) { left: calc((100% - 80px) * -6 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(2) { left: calc((100% - 80px) * -5 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(3) { left: calc((100% - 80px) * -4 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(4) { left: calc((100% - 80px) * -3 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(5) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(6) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(7) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(7) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='7'] .items a:nth-child(8) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(9) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='7'] .items a:nth-child(10) { left: calc((100% - 80px) * 3 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(1) { left: calc((100% - 80px) * -7 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(2) { left: calc((100% - 80px) * -6 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(3) { left: calc((100% - 80px) * -5 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(4) { left: calc((100% - 80px) * -4 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(5) { left: calc((100% - 80px) * -3 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(6) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(7) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(8) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(8) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='8'] .items a:nth-child(9) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='8'] .items a:nth-child(10) { left: calc((100% - 80px) * 2 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(1) { left: calc((100% - 80px) * -8 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(2) { left: calc((100% - 80px) * -7 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(3) { left: calc((100% - 80px) * -6 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(4) { left: calc((100% - 80px) * -5 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(5) { left: calc((100% - 80px) * -4 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(6) { left: calc((100% - 80px) * -3 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(7) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(8) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(9) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='9'] .items a:nth-child(9) figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='9'] .items a:nth-child(10) { left: calc((100% - 80px) * 1 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(1) { left: calc((100% - 80px) * -9 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(2) { left: calc((100% - 80px) * -8 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(3) { left: calc((100% - 80px) * -7 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(4) { left: calc((100% - 80px) * -6 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(5) { left: calc((100% - 80px) * -5 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(6) { left: calc((100% - 80px) * -4 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(7) { left: calc((100% - 80px) * -3 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(8) { left: calc((100% - 80px) * -2 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(9) { left: calc((100% - 80px) * -1 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(10) { left: calc((100% - 80px) * 0 + 40px); }
+  #index-sale-items[data-i='10'] .items a:nth-child(10) figure:after { border-color: #e0b65f; } }
+@media screen and (min-width: 500px) { #index-sale-items .items a:hover figure:after { border-color: #e0b65f; }
+  #index-sale-items[data-i='1'] .items a:nth-child(1) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='1'] .items a:nth-child(2) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='1'] .items a:nth-child(3) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='1'] .items a:nth-child(4) { left: calc(100% / 3 * 3); }
+  #index-sale-items[data-i='1'] .items a:nth-child(5) { left: calc(100% / 3 * 4); }
+  #index-sale-items[data-i='1'] .items a:nth-child(6) { left: calc(100% / 3 * 5); }
+  #index-sale-items[data-i='1'] .items a:nth-child(7) { left: calc(100% / 3 * 6); }
+  #index-sale-items[data-i='1'] .items a:nth-child(8) { left: calc(100% / 3 * 7); }
+  #index-sale-items[data-i='1'] .items a:nth-child(9) { left: calc(100% / 3 * 8); }
+  #index-sale-items[data-i='1'] .items a:nth-child(10) { left: calc(100% / 3 * 9); }
+  #index-sale-items[data-i='2'] .items a:nth-child(1) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='2'] .items a:nth-child(2) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='2'] .items a:nth-child(3) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='2'] .items a:nth-child(4) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='2'] .items a:nth-child(5) { left: calc(100% / 3 * 3); }
+  #index-sale-items[data-i='2'] .items a:nth-child(6) { left: calc(100% / 3 * 4); }
+  #index-sale-items[data-i='2'] .items a:nth-child(7) { left: calc(100% / 3 * 5); }
+  #index-sale-items[data-i='2'] .items a:nth-child(8) { left: calc(100% / 3 * 6); }
+  #index-sale-items[data-i='2'] .items a:nth-child(9) { left: calc(100% / 3 * 7); }
+  #index-sale-items[data-i='2'] .items a:nth-child(10) { left: calc(100% / 3 * 8); }
+  #index-sale-items[data-i='3'] .items a:nth-child(1) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='3'] .items a:nth-child(2) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='3'] .items a:nth-child(3) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='3'] .items a:nth-child(4) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='3'] .items a:nth-child(5) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='3'] .items a:nth-child(6) { left: calc(100% / 3 * 3); }
+  #index-sale-items[data-i='3'] .items a:nth-child(7) { left: calc(100% / 3 * 4); }
+  #index-sale-items[data-i='3'] .items a:nth-child(8) { left: calc(100% / 3 * 5); }
+  #index-sale-items[data-i='3'] .items a:nth-child(9) { left: calc(100% / 3 * 6); }
+  #index-sale-items[data-i='3'] .items a:nth-child(10) { left: calc(100% / 3 * 7); }
+  #index-sale-items[data-i='4'] .items a:nth-child(1) { left: calc(100% / 3 * -3); }
+  #index-sale-items[data-i='4'] .items a:nth-child(2) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='4'] .items a:nth-child(3) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='4'] .items a:nth-child(4) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='4'] .items a:nth-child(5) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='4'] .items a:nth-child(6) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='4'] .items a:nth-child(7) { left: calc(100% / 3 * 3); }
+  #index-sale-items[data-i='4'] .items a:nth-child(8) { left: calc(100% / 3 * 4); }
+  #index-sale-items[data-i='4'] .items a:nth-child(9) { left: calc(100% / 3 * 5); }
+  #index-sale-items[data-i='4'] .items a:nth-child(10) { left: calc(100% / 3 * 6); }
+  #index-sale-items[data-i='5'] .items a:nth-child(1) { left: calc(100% / 3 * -4); }
+  #index-sale-items[data-i='5'] .items a:nth-child(2) { left: calc(100% / 3 * -3); }
+  #index-sale-items[data-i='5'] .items a:nth-child(3) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='5'] .items a:nth-child(4) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='5'] .items a:nth-child(5) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='5'] .items a:nth-child(6) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='5'] .items a:nth-child(7) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='5'] .items a:nth-child(8) { left: calc(100% / 3 * 3); }
+  #index-sale-items[data-i='5'] .items a:nth-child(9) { left: calc(100% / 3 * 4); }
+  #index-sale-items[data-i='5'] .items a:nth-child(10) { left: calc(100% / 3 * 5); }
+  #index-sale-items[data-i='6'] .items a:nth-child(1) { left: calc(100% / 3 * -5); }
+  #index-sale-items[data-i='6'] .items a:nth-child(2) { left: calc(100% / 3 * -4); }
+  #index-sale-items[data-i='6'] .items a:nth-child(3) { left: calc(100% / 3 * -3); }
+  #index-sale-items[data-i='6'] .items a:nth-child(4) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='6'] .items a:nth-child(5) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='6'] .items a:nth-child(6) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='6'] .items a:nth-child(7) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='6'] .items a:nth-child(8) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='6'] .items a:nth-child(9) { left: calc(100% / 3 * 3); }
+  #index-sale-items[data-i='6'] .items a:nth-child(10) { left: calc(100% / 3 * 4); }
+  #index-sale-items[data-i='7'] .items a:nth-child(1) { left: calc(100% / 3 * -6); }
+  #index-sale-items[data-i='7'] .items a:nth-child(2) { left: calc(100% / 3 * -5); }
+  #index-sale-items[data-i='7'] .items a:nth-child(3) { left: calc(100% / 3 * -4); }
+  #index-sale-items[data-i='7'] .items a:nth-child(4) { left: calc(100% / 3 * -3); }
+  #index-sale-items[data-i='7'] .items a:nth-child(5) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='7'] .items a:nth-child(6) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='7'] .items a:nth-child(7) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='7'] .items a:nth-child(8) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='7'] .items a:nth-child(9) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='7'] .items a:nth-child(10) { left: calc(100% / 3 * 3); }
+  #index-sale-items[data-i='8'] .items a:nth-child(1) { left: calc(100% / 3 * -7); }
+  #index-sale-items[data-i='8'] .items a:nth-child(2) { left: calc(100% / 3 * -6); }
+  #index-sale-items[data-i='8'] .items a:nth-child(3) { left: calc(100% / 3 * -5); }
+  #index-sale-items[data-i='8'] .items a:nth-child(4) { left: calc(100% / 3 * -4); }
+  #index-sale-items[data-i='8'] .items a:nth-child(5) { left: calc(100% / 3 * -3); }
+  #index-sale-items[data-i='8'] .items a:nth-child(6) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='8'] .items a:nth-child(7) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='8'] .items a:nth-child(8) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='8'] .items a:nth-child(9) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='8'] .items a:nth-child(10) { left: calc(100% / 3 * 2); }
+  #index-sale-items[data-i='9'] .items a:nth-child(1) { left: calc(100% / 3 * -8); }
+  #index-sale-items[data-i='9'] .items a:nth-child(2) { left: calc(100% / 3 * -7); }
+  #index-sale-items[data-i='9'] .items a:nth-child(3) { left: calc(100% / 3 * -6); }
+  #index-sale-items[data-i='9'] .items a:nth-child(4) { left: calc(100% / 3 * -5); }
+  #index-sale-items[data-i='9'] .items a:nth-child(5) { left: calc(100% / 3 * -4); }
+  #index-sale-items[data-i='9'] .items a:nth-child(6) { left: calc(100% / 3 * -3); }
+  #index-sale-items[data-i='9'] .items a:nth-child(7) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='9'] .items a:nth-child(8) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='9'] .items a:nth-child(9) { left: calc(100% / 3 * 0); }
+  #index-sale-items[data-i='9'] .items a:nth-child(10) { left: calc(100% / 3 * 1); }
+  #index-sale-items[data-i='10'] .items a:nth-child(1) { left: calc(100% / 3 * -9); }
+  #index-sale-items[data-i='10'] .items a:nth-child(2) { left: calc(100% / 3 * -8); }
+  #index-sale-items[data-i='10'] .items a:nth-child(3) { left: calc(100% / 3 * -7); }
+  #index-sale-items[data-i='10'] .items a:nth-child(4) { left: calc(100% / 3 * -6); }
+  #index-sale-items[data-i='10'] .items a:nth-child(5) { left: calc(100% / 3 * -5); }
+  #index-sale-items[data-i='10'] .items a:nth-child(6) { left: calc(100% / 3 * -4); }
+  #index-sale-items[data-i='10'] .items a:nth-child(7) { left: calc(100% / 3 * -3); }
+  #index-sale-items[data-i='10'] .items a:nth-child(8) { left: calc(100% / 3 * -2); }
+  #index-sale-items[data-i='10'] .items a:nth-child(9) { left: calc(100% / 3 * -1); }
+  #index-sale-items[data-i='10'] .items a:nth-child(10) { left: calc(100% / 3 * 0); } }
+@media screen and (max-width: 349px) and (min-width: 0) { #index-sale-items { height: 280px; }
+  #index-sale-items label { top: 69px; }
+  #index-sale-items .items a figure { height: 180px; } }
+@media screen and (max-width: 399px) and (min-width: 350px) { #index-sale-items { height: 300px; }
+  #index-sale-items label { top: 79px; }
+  #index-sale-items .items a { padding: 0 8px; }
+  #index-sale-items .items a figure { height: 200px; } }
+@media screen and (max-width: 499px) and (min-width: 400px) { #index-sale-items { height: 340px; }
+  #index-sale-items label { top: 99px; }
+  #index-sale-items .items a { padding: 0 8px; }
+  #index-sale-items .items a figure { height: 240px; } }
+@media screen and (max-width: 649px) and (min-width: 500px) { #index-sale-items { height: 240px; }
+  #index-sale-items label { top: 49px; }
+  #index-sale-items .items { width: 100%; margin: 0; }
+  #index-sale-items .items a { padding: 0 8px; }
+  #index-sale-items .items a figure { height: 140px; } }
+@media screen and (max-width: 719px) and (min-width: 650px) { #index-sale-items { height: 240px; }
+  #index-sale-items label { top: 49px; }
+  #index-sale-items .items a figure { height: 140px; } }
+@media screen and (max-width: 799px) and (min-width: 720px) { #index-sale-items { height: 270px; }
+  #index-sale-items label { top: 64px; }
+  #index-sale-items .items a figure { height: 170px; } }
+@media screen and (max-width: 919px) and (min-width: 800px) { #index-sale-items { height: 300px; }
+  #index-sale-items label { top: 79px; }
+  #index-sale-items .items a figure { height: 200px; } }
 
 #index-new { display: inline-block; width: 100%; padding: 32px 0; background-color: white; }
 #index-new .container { display: inline-block; width: 100%; max-width: 1000px; }

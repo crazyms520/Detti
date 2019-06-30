@@ -167,11 +167,11 @@
   position: fixed;
   right: -200px;
   top: 0;
-  z-index: 999;
   display: inline-block;
   width: 200px;
   height: 100%;
-  z-index: 1;
+  z-index: 999;
+
 
   background-color: rgba(33, 47, 73, .750);
   @include transition(right .3s, opacity .3s);
@@ -256,10 +256,10 @@
   display: inline-block;
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   @include range-width(0, 805px) {
     margin-top: 64px + 20px;
-    margin-bottom: 20px;
+    margin-bottom:8px;
   }
 
   .container {
@@ -283,7 +283,7 @@
   }
 }
 
-#title {
+.step-title {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -295,8 +295,9 @@
     max-width: 1000px + 8px * 2;
     padding: 0 8px;
     text-align: left;
+    position: relative;
   }
-  h1 {
+  h1, h2 {
     position: relative;
     display: inline-block;
     height: 36px;
@@ -314,6 +315,68 @@
       height: 2px;
       content: '';
     }
+  }
+  label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    color: rgba(232, 165, 9, 1.00);
+    border: 1px solid rgba(232, 165, 9, 1.00);
+    margin-top: (65px - 30px) / 2;
+    @include border-radius(3px);
+    @include range-width(0, 1000px + 8px) {
+      right: 8px;
+    };
+    
+    select {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      color: rgba(232, 165, 9, 1.00);
+      background-color: white;
+      font-size: 16px;
+      padding: 0 12px;
+      padding-right: 12px + 16px + 8px;
+      /* for Firefox */
+      -moz-appearance: none;
+      /* for Chrome */
+      -webkit-appearance: none;
+      /* For IE10 */
+      &::-ms-expand {
+        display: none;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+    &:after {
+      content: '\e90a';
+      font-family: "icon";
+
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      position: absolute;
+      right: 8px;
+      top: 0;
+      display: inline-block;
+      width: 16px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  &.price-list {
+    background-color: rgba(236, 237, 238, 1.00);
+    padding-top: 20px;
+  }
+  &.blue {
+    background-color: rgba(223, 232, 248, 1.00);
+    padding-top: 20px;
   }
 }
 
@@ -826,6 +889,374 @@
   }
 }
 
+#sales, #news {
+
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 26px;
+  padding-bottom: 40px;
+  background-color: rgba(244, 242, 228, 1.00);
+  z-index: 1;
+
+  + #pages {
+    background-color: rgba(244, 242, 228, 1.00);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin: 0;
+    @include range-width(0, 500px) {
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+
+    > div {
+
+      > * {
+        &:hover, &.now {
+          background-color: rgba(225, 155, 18, 1.00);
+        }
+      }
+    }
+  }
+  .container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px + 8px * 2;
+    padding: 0 8px;
+    @include clearfix();
+  }
+}
+
+#sales {
+  .container {
+    a {
+      float: left;
+      text-decoration: none;
+      padding: 12px;
+      background-color: white;
+      width: calc(100% / 3 - 40px * 2 / 3);
+      margin-right: 40px;
+      margin-top: 40px;
+      &:hover {
+        figure {
+          &:before, &:after {
+            @include opacity(1);
+          }
+          i {
+            right: 24px;
+            top: 24px;
+          }
+        }
+      }
+    }
+    figure {
+      height: 236px;
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      i {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        background-color: rgba(227, 162, 17, 1.00);
+        @include border-radius(3px);
+        color: white;
+        height: 26px;
+        line-height: 26px;
+        padding: 0 12px;
+        z-index: 3;
+        font-style: normal;
+      }
+      &:before, &:after {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        display: inline-block;
+        width: calc(100% - #{12px * 2});
+        height: calc(100% - #{12px * 2});
+        content: '';
+        @include opacity(0);
+        @include transition(opacity .3s);
+      }
+      &:before {
+        content: '\e914';
+        font-family: "icon";
+
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        z-index: 2;
+        font-size: 44px;
+        color: white;
+
+        width: 120px;
+        height: 55px;
+        line-height: 55px;
+        left: calc(50% - #{120px / 2});
+        top: calc(50% - #{55px / 2});
+      }
+      &:after {
+        background-color: rgba(180, 130, 36, .55);
+        z-index: 1;
+      }
+    }
+    div {
+      display: inline-block;
+      width: 100%;
+      height: 30px;
+      line-height: 32px;
+      margin-top: 4px;
+      text-align: left;
+      color: rgba(159, 160, 161, 1.00);
+      
+      &:before {
+        color: rgba(222, 158, 2, 1.00);
+        content: '特價：' attr(data-sale);
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 4px;
+        line-height: 30px;
+      }
+      &:after {
+        font-size: 13px;
+        content: '原價：' attr(data-ori);
+        display: inline-block;
+        margin-left: 4px;
+        text-decoration: line-through;
+      }
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      height: 23px;
+      line-height: 23px;
+      color: rgba(38, 74, 118, 1.00);
+      text-align: left;
+      font-size: 14px;
+      &:before {
+        display: inline-block;
+        margin-right: 4px;
+        @include opacity(.8);
+      }
+    }
+  }
+  @include range-width(0, 600px) {
+    .container {
+      a {
+        width: 100%;
+        margin-top: 12px;
+      }
+    }
+  }
+  @include range-width(600px, 850px) {
+    .container {
+      a {
+        width: calc(100% / 2 - 20px * 1 / 2);
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+  @include range-width(850px, 950px) {
+    .container {
+      a {
+        width: calc(100% / 3 - 20px * 2 / 3);
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+  @include range-width(0, 600px) {
+    .container {
+      a {
+      }
+    }
+  }
+  @include range-width(600px, 850px) {
+    .container {
+      a {
+        &:nth-child(2n + 2) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include range-width(850px) {
+    .container {
+      a {
+        &:nth-child(3n + 3) {
+          margin-right: 0;
+        }
+      }
+    }
+  };
+}
+
+#news {
+  background-color: rgba(223, 232, 248, 1.00);
+
+  + #pages {
+    background-color: rgba(223, 232, 248, 1.00);
+  }
+  
+  .container {
+    
+    a {
+      float: left;
+      text-decoration: none;
+      padding: 12px;
+      background-color: white;
+      width: calc(100% / 3 - 40px * 2 / 3);
+      margin-right: 40px;
+      margin-top: 40px;
+      &:hover {
+        figure {
+          &:before, &:after {
+            @include opacity(1);
+          }
+        }
+      }
+    }
+    figure {
+      height: 236px;
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      &:before, &:after {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        display: inline-block;
+        width: calc(100% - #{12px * 2});
+        height: calc(100% - #{12px * 2});
+        content: '';
+        @include opacity(0);
+        @include transition(opacity .3s);
+        
+      }
+      &:before {
+        content: '\e914';
+        font-family: "icon";
+
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        z-index: 2;
+        font-size: 44px;
+        color: white;
+
+        width: 120px;
+        height: 55px;
+        line-height: 55px;
+        left: calc(50% - #{120px / 2});
+        top: calc(50% - #{55px / 2});
+
+      }
+      &:after {
+        background-color: rgba(180, 130, 36, .55);
+        z-index: 1;
+      }
+    }
+    div {
+      display: inline-block;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      @include clearfix();
+      
+      * {
+        float: left;
+        display: inline-block;
+        width: 50%;
+        color: rgba(53, 77, 116, 1.00);
+        height: 22px;
+        line-height: 22px;
+        text-align: left;
+        &:before {
+          display: inline-block;
+          margin-right: 4px;
+          font-size: 16px;
+          @include opacity(.8);
+        }
+        + * {
+          text-align: right;
+          &:before {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  @include range-width(0, 600px) {
+    .container {
+      a {
+        width: 100%;
+        margin-top: 12px;
+      }
+      figure {
+        height: 200px;
+      }
+    }
+  }
+  @include range-width(600px, 800px) {
+    .container {
+      a {
+        width: calc(100% / 2 - 20px * 1 / 2);
+        margin-right: 20px;
+        margin-top: 20px;
+        &:nth-child(2n + 2) {
+          margin-right: 0;
+        }
+      }
+      figure {
+        height: 200px;
+      }
+    }
+  };
+  @include range-width(600px, 800px) {
+    .container {
+      a {
+        &:nth-child(2n + 2) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include range-width(800px) {
+    .container {
+      a {
+        &:nth-child(3n + 3) {
+          margin-right: 0;
+        }
+      }
+    }
+  };
+  @include range-width(800px, 900px) {
+    .container {
+      a {
+        width: calc(100% / 3 - 20px * 2 / 3);
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+      figure {
+        height: 200px;
+      }
+    }
+  };
+  @include range-width(900px, 1000px) {
+    .container {
+      figure {
+        height: 200px;
+      }
+    }
+  };
+}
+
 #pages {
   display: inline-block;
   width: 100%;
@@ -855,4 +1286,234 @@
       }
     }
   }  
+}
+
+#map {
+  display: inline-block;
+  width: 100%;
+  height: 355px;
+  margin-top: 20px;
+  background-color: rgba(229, 227, 223, 1.00);
+
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+  }
+}
+
+#contact {
+  display: inline-block;
+  width: 100%;
+  margin-top: 44px;
+
+  .container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px + 8px * 2;
+    padding: 0 8px;
+    @include clearfix();
+    h2 {
+      float: left;
+      display: inline-block;
+      width: 100%;
+      margin: 0;
+      height: 44px;
+      line-height: 36px;
+      position: relative;
+      margin-bottom: 50px;
+      color: rgba(33, 47, 73, 1.00);
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: calc(50% - #{120px / 2});
+        bottom: 0;
+        display: inline-block;
+        width: 80px;
+        height: 2px;
+        background-color: rgba(227, 162, 18, 1.00);
+      }
+      @include range-width(0, 650px) {
+        font-size: 18px;
+      }
+    }
+    input, textarea {
+      float: left;
+      display: inline-block;
+      border: 0;
+      border-bottom: 1px solid rgba(210, 211, 212, 1.00);
+      @include transition(border-bottom-color .3s);
+      @include input-placeholder {
+        font-size: 14px;
+        color: rgba(162, 163, 164, 1.00);
+      }
+      &:focus {
+        border-bottom-color: rgba(225, 178, 33, 1.00);
+        outline: 0;
+      }
+    }
+    input {
+      width: calc(100% / 3 - 32px * 2 / 3);
+      height: 36px;
+      line-height: 36px;
+      
+      + input {
+        margin-left: 32px;
+      }
+      @include range-width(0, 650px) {
+        width: 100%;
+        + input {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      };
+    }
+    textarea {
+      width: 100%;
+      line-height: 22px;
+      height: 22px * 4;
+
+      resize: none;
+      margin-top: 32px;
+    }
+    button {
+      display: inline-block;
+      width: 100px;
+      height: 32px;
+      line-height: 32px;
+      letter-spacing: 3px;
+      color: white;
+      background-color: rgba(225, 178, 33, 1.00);
+      border: 0;
+      @include border-radius(3px);
+      margin-top: 40px;
+      font-size: 14px;
+      @include transition(background-color .3s);
+      cursor: pointer;
+      
+        
+      &:hover {
+        background-color: rgba(212, 163, 14, 1.00);
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+#contact-info {
+  display: inline-block;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @include range-width(0, 650px) {
+    margin-top: 36px;
+  }
+  .container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px + 8px * 2;
+    padding: 0 8px;
+    @include clearfix();
+    > * {
+      float: left;
+      display: inline-block;
+      width: calc(100% / 3);
+      @include range-width(0, 650px) {
+        width: 100%;
+        + * {
+          margin-top: 20px;
+        }
+      }
+      b {
+        display: inline-block;
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        color: rgba(115, 116, 117, 1.00);
+        &:before {
+          color: rgba(225, 178, 33, 1.00);
+          display: inline-block;
+          margin-right: 4px;
+        }
+      }
+      span {
+        color: rgba(33, 39, 53, 1.00);
+        display: inline-block;
+        width: 100%;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+#price-list {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 80px;
+
+  .bg {
+    display: inline-block;
+    width: 100%;
+    height: 210px;
+    background-color: rgba(236, 237, 238, 1.00);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .pc, .mobile {
+    position: relative;
+    display: none;
+    margin: 0;
+    z-index: 2;
+  }
+  .pc {
+    width: 916px; // 7:5
+    max-width: calc(100% - #{16px * 2});
+    margin-top: 20px;
+    &:before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 71%;
+    }
+  }
+  .mobile {
+    width: 355px; // 2:3
+
+    max-width: calc(100% - #{16px * 2});
+    margin-top: 20px;
+    &:before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 150%;
+    }
+  }
+  @include range-width(0, 600px) {
+    .pc {
+      display: none;
+    }
+    .mobile {
+      display: inline-block;
+    }
+  };
+  @include range-width(600px) {
+    .pc {
+      display: inline-block;
+    }
+    .mobile {
+      display: none;
+    }
+  };
 }
