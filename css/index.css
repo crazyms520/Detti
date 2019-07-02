@@ -40,9 +40,9 @@ html body::selection { color: white; background-color: #78baff; }
 #index-banner .container .banners .items > *:nth-child(8) { left: 700%; }
 #index-banner .container .banners .items > *:nth-child(9) { left: 800%; }
 #index-banner .container .banners .items > *:nth-child(10) { left: 900%; }
-#index-banner .container .banners .pages { display: inline-block; width: 100%; height: 32px; }
+#index-banner .container .banners .pages { display: inline-block; width: 100%; height: 32px; bottom: 0; }
 #index-banner .container .banners .pages:empty { display: none; }
-#index-banner .container .banners .pages span { display: inline-block; *zoom: 1; margin-top: 8px; }
+#index-banner .container .banners .pages span { display: inline-block; *zoom: 1; margin-top: 8px; width: 12px; height: 12px; }
 #index-banner .container .banners .pages span:after { display: table; content: ""; line-height: 0; clear: both; }
 #index-banner .container .banners .pages span.swiper-pagination-bullet-active { background-color: #d8b44b; }
 @media screen and (max-width: 849px) and (min-width: 0) { #index-banner .container .header { display: inline-block; }
