@@ -50,14 +50,34 @@ $(function() {
     });
   });
   
-  $('.banners').each(function() {
-    var $that = $(this).attr('data-i', 1);
-    var count = $that.find('> .items > *').length;
-    $that.find('.pages').append($('<span />').append($(Array.apply(null, Array(count)).map(function (_, i) { return $('<label />'); })).map($.fn.toArray).click(function() { $that.attr('data-i', $(this).index() + 1); })))
-    setInterval(function() {
-      var i = parseInt($that.attr('data-i'), 10) + 1;
-      $that.attr('data-i', i > count ? 1 : i)
-    }, 7000);
-  })
+  // $('.banners').each(function() {
+  //   var $that = $(this).attr('data-i', 1);
+  //   var count = $that.find('> .items > *').length;
+  //   $that.find('.pages').append($('<span />').append($(Array.apply(null, Array(count)).map(function (_, i) { return $('<label />'); })).map($.fn.toArray).click(function() { $that.attr('data-i', $(this).index() + 1); })))
+  //   setInterval(function() {
+  //     var i = parseInt($that.attr('data-i'), 10) + 1;
+  //     $that.attr('data-i', i > count ? 1 : i)
+  //   }, 7000);
+  // })
+  var mySwiper = new Swiper ('.banners', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
 
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
 });

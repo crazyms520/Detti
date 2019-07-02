@@ -197,7 +197,7 @@ html {
         display: inline-block;
         width: 100%;
         height: calc(100% - 32px);
-        overflow: hidden;
+        // overflow: hidden;
 
         > * {
           position: absolute;
@@ -227,45 +227,48 @@ html {
           @include clearfix();
           margin-top: (32px - 16px) / 2;
           
-          label {
-            float: left;
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            line-height: 12px;
-            cursor: pointer;
-            @include border-radius(50%);
-            background-color: rgba(202, 205, 201, 1.00);
-            + * {
-              margin-left: 8px;
-            }
-            &.a {
-              background-color: rgba(216, 180, 75, 1.00);
-            }
+          // label {
+          //   float: left;
+          //   display: inline-block;
+          //   width: 12px;
+          //   height: 12px;
+          //   line-height: 12px;
+          //   cursor: pointer;
+          //   @include border-radius(50%);
+          //   background-color: rgba(202, 205, 201, 1.00);
+          //   + * {
+          //     margin-left: 8px;
+          //   }
+          //   &.a {
+          //     background-color: rgba(216, 180, 75, 1.00);
+          //   }
+          // }
+          &.swiper-pagination-bullet-active {
+            background-color: rgba(216, 180, 75, 1.00);
           }
         }
       }
-      @for $i from 1 through 10 {
-        &[data-i='#{$i}'] {
-          .items > * {
-            @for $j from 1 through 10 {
-              &:nth-child(#{$j}) {
-                left: #{100% * ($j - $i)};
-              }
-            }
-          }
-          .pages span > * {
-            @for $j from 1 through 10 {
-              background-color: rgba(202, 205, 201, 1.00);
-              @if ($i == $j) {
-                &:nth-child(#{$j}) {
-                  background-color: rgba(216, 180, 75, 1.00);
-                }
-              }
-            }
-          }
-        }
-      }
+      // @for $i from 1 through 10 {
+      //   &[data-i='#{$i}'] {
+      //     .items > * {
+      //       @for $j from 1 through 10 {
+      //         &:nth-child(#{$j}) {
+      //           left: #{100% * ($j - $i)};
+      //         }
+      //       }
+      //     }
+      //     .pages span > * {
+      //       @for $j from 1 through 10 {
+      //         background-color: rgba(202, 205, 201, 1.00);
+      //         @if ($i == $j) {
+      //           &:nth-child(#{$j}) {
+      //             background-color: rgba(216, 180, 75, 1.00);
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
     }
     @include range-width(0, 850px) {
       .header {
