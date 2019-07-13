@@ -532,6 +532,10 @@ html {
                     border-color: rgba(224, 182, 95, 1);
                   }
                 }
+              } @else {
+                b, span, del {
+                  @include opacity(0);
+                }
               }
             }
           }
@@ -858,9 +862,15 @@ html {
       span {
         display: inline-block;
         width: 100%;
-        height: 28px;
+        // height: 28px;
         line-height: 28px;
+        position: relative;
+        padding-left: 54px;
         &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+
           content: '';
           display: inline-block;
           width: 54px;

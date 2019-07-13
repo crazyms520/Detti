@@ -564,7 +564,7 @@
 #details .container div { display: inline-block; width: 100%; *zoom: 1; margin-top: 32px; }
 #details .container div:after { display: table; content: ""; line-height: 0; clear: both; }
 #details .container div span { float: left; display: inline-block; height: 32px; line-height: 30px; border-bottom: 1px solid #d0d1d2; border-right: 1px solid #d0d1d2; text-align: left; padding: 0 8px; color: #7d7e7f; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#details .container div span:before { content: attr(data-title) "："; color: #97a7be; }
+#details .container div span:before { content: attr(data-title) "："; display: inline-block; width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #97a7be; }
 @media screen and (max-width: 599px) and (min-width: 0) { #details .container div span { width: 100%; }
   #details .container div span:nth-child(n + 1) { border-left: 1px solid #d0d1d2; }
   #details .container div span:nth-child(-n + 1) { border-top: 1px solid #d0d1d2; } }
@@ -584,7 +584,7 @@
 #images label:hover { background-color: #2f496d; }
 #images label + label { right: 8px; }
 #images .items { position: relative; display: inline-block; width: 100%; height: 100%; overflow: hidden; }
-#images .items > div { position: absolute; top: 0; display: inline-block; width: 100%; background-color: #f0f1f2; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+#images .items > div { position: absolute; top: 0; display: inline-block; width: 100%; padding-bottom: 50px; background-color: #f0f1f2; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 #images .items > div > * { display: inline-block; }
 #images .items > div > div { padding: 30px 24px; width: 100%; min-height: 412px; }
 #images .items figure { position: absolute; left: 0; top: 0; width: 555px; height: 100%; margin: 0; height: 100%; }
