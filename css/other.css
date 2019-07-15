@@ -1,7 +1,7 @@
 @charset "UTF-8";
 *, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
 
-@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1561118200') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1561118200') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1561118200') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1561118200') format('svg'); }
+@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1563156708') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1563156708') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1563156708') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1563156708') format('svg'); }
 #header { display: inline-block; width: 100%; background-color: #202e4a; }
 #header .container { display: inline-block; width: 100%; max-width: 1016px; padding: 0 8px; height: 110px; *zoom: 1; }
 #header .container:after { display: table; content: ""; line-height: 0; clear: both; }
@@ -54,11 +54,12 @@
 .step-title h1, .step-title h2 { position: relative; display: inline-block; height: 36px; line-height: 46px; font-size: 20px; font-weight: bold; }
 .step-title h1:before, .step-title h2:before { background-color: #e3a211; position: absolute; top: 0; left: 0; display: inline-block; width: 64px; height: 2px; content: ''; }
 .step-title label { position: absolute; right: 0; top: 0; display: inline-block; height: 30px; line-height: 30px; color: #e8a509; border: 1px solid #e8a509; margin-top: 17.5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
-@media screen and (max-width: 1007px) and (min-width: 0) { .step-title label { right: 8px; } }
+@media screen and (max-width: 1007px) and (min-width: 0) { .step-title label { position: relative; display: block; height: 40px; } }
 .step-title label select { display: inline-block; width: 100%; height: 100%; border: 0; color: #e8a509; background-color: white; font-size: 16px; padding: 0 12px; padding-right: 36px; /* for Firefox */ -moz-appearance: none; /* for Chrome */ -webkit-appearance: none; /* For IE10 */ }
 .step-title label select::-ms-expand { display: none; }
 .step-title label select:focus { outline: 0; }
 .step-title label:after { content: '\e90a'; font-family: "icon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; position: absolute; right: 8px; top: 0; display: inline-block; width: 16px; height: 30px; line-height: 30px; }
+@media screen and (max-width: 1007px) and (min-width: 0) { .step-title label:after { top: 4px; } }
 .step-title.price-list { background-color: #ecedee; padding-top: 20px; }
 .step-title.blue { background-color: #dfe8f8; padding-top: 20px; }
 
